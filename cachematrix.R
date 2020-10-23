@@ -2,13 +2,20 @@
 ## functions do
 
 ## Write a short comment describing this function
+## The function returns a list of function, 1. set the value of a matrix; 2. get the value of a matrix; 3. Calculate the inverse of the matrix; 4. Get the value of the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 
 }
+  get <- function() x
+  setinv <- function(solve) i <<- solve
+  getinv <- function() i
+  list( set = set, get = get, setinv = setinv, getinv = getinv)
+} 
 
 
-## Write a short comment describing this function
+## The cacheSolve function retrieves the cache matrix from the makeCacheMatrix and print the inverse matrix, 
+## if there is no cached matrix, it calculates the inverse of a given matrix in the makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
   i <- x$getinv()
